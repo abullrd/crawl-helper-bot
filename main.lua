@@ -1,5 +1,5 @@
 function explore()
-   if #crawl_state.desired_items() > 0 then
+   if #crawl_state.desired_items > 0 then
     --
   elseif crawl_state.explored() then
     command('G>')
