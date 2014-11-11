@@ -7,7 +7,7 @@ return {
     else
       command('o')
     end
-  end
+  end,
   
   start_turn = function ()
     if (#crawl_state.enemies() == 0) then
