@@ -1,10 +1,19 @@
 return {
-  start_turn = function ()
-    crawl.mpr("IN user script!")
-    if (#crawl_state.enemies() == 0) then
+  explore = function()
+    if (#crawl_state.desired_items() > 0) then
+      --
+    elseif (crawl_state.explored()) then
       command('G>')
     else
-      crawl.mpr("Watch out")
+      command('o')
+    end
+  end
+  
+  start_turn = function ()
+    if (#crawl_state.enemies() == 0) then
+      explore()
+    else
+      crawl.mpr("Watch out!\n")
       hit_closest()
     end
   end
