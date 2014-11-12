@@ -9,6 +9,7 @@ function explore()
 end
 
 function start_turn()
+  crawl.mpr(map.knowledge[10][10].seen))
   if (#c_state.enemies() == 0) then
     explore()
   else
